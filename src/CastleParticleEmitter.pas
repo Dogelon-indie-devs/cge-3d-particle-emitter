@@ -1,7 +1,5 @@
 unit CastleParticleEmitter;
 
-{$coperators on}
-{$macro on}
 {$define nl:=+ LineEnding +}
 
 {$ifdef ANDROID}{$define GLES}{$endif}
@@ -17,7 +15,7 @@ uses
   {$ifdef GLES}
   CastleGLES,
   {$else}
-  GL, GLExt,
+   Winapi.OpenGL,
   {$endif}
   {$ifdef CASTLE_DESIGN_MODE}
   PropEdits, CastlePropEdits, CastleDebugTransform,
